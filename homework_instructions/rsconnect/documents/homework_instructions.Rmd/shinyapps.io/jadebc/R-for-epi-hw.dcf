@@ -1,0 +1,13 @@
+name: R-for-epi-hw
+title: R-for-epi-hw
+username:
+account: jadebc
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 407148
+bundleId: 1571292
+url: https://jadebc.shinyapps.io/R-for-epi-hw/
+when: 1536174421.13874
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: www/sample-autograder.gif

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+<meta name="progressive" content="false" />
+<meta name="allow-skip" content="false" />
+
+<title>R-for-Epi Homework Instructions</title>
+
+
+<!-- highlightjs -->
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+</head>
+
+<body>
+
+
+
+<div class="pageContent band">
+<div class="bandContent page">
+
+<div class="topics">
+
+<div id="section-overview" class="section level2">
+<h2>Overview</h2>
+<div id="section-how-homework-works" class="section level3">
+<h3>How homework works</h3>
+<p>To ensure that you gain experience working in R “from scratch”&quot; we have created homework assignments that you will complete on your own computer using RStudio, a free interactive environment that we recommend for coding R.</p>
+<ol style="list-style-type: decimal">
+<li>Setup Rstudio on your desktop</li>
+<li>Download homework assignment from the <a href="https://ucb-epi-r.github.io/R-for-epi/">R-for-epi site</a></li>
+<li>Save the homework and any data files in the homework zip file to your computer</li>
+<li>Complete the homework assignment</li>
+<li>Upload the completed homework assignment to <a href="okpy.org" class="uri">okpy.org</a></li>
+<li>You will receive your grade via email</li>
+<li>Check bCourses for solutions to the assignment</li>
+</ol>
+</div>
+<div id="section-video-overview" class="section level3">
+<h3>Video overview</h3>
+<p>This video and the rest of the pages on this site provide step-by-instructions on how to do homework. <a href="https://youtu.be/bAtSXCjrbpk"><img src="https://img.youtube.com/vi/bAtSXCjrbpk/0.jpg" alt="IMAGE ALT TEXT HERE" /></a></p>
+<p>Questions? Contact <a href="mailto:jadebc@berkeley.edu">Jade Benjamin-Chung</a></p>
+</div>
+</div>
+<div id="section-setup" class="section level2">
+<h2>Setup</h2>
+<p>In order to complete homework assignments, you will need to download R and RStudio.</p>
+<div id="section-install-r" class="section level3">
+<h3>Install R</h3>
+<p>To install R, follow either link below:</p>
+<ul>
+<li><a href="https://cran.r-project.org/bin/macosx/">Download R for Mac</a></li>
+<li><a href="https://cran.r-project.org/bin/windows/base/">Download R for PC</a></li>
+</ul>
+</div>
+<div id="section-install-rstudio" class="section level3">
+<h3>Install RStudio</h3>
+<p>You can use R itself, but we recommend that you use RStudio, an Interactive Development Environment (IDE) with lots of features that makes R easier to use.</p>
+<ul>
+<li><a href="https://www.rstudio.com/products/rstudio/download/">Download RStudio</a></li>
+<li>See the <a href="https://jadebc.shinyapps.io/intro-to-R/">Intro to R tutorial</a> for resources on how to use RStudio.</li>
+</ul>
+</div>
+<div id="section-install-required-packages" class="section level3">
+<h3>Install required packages</h3>
+<p>You will need to install some R packages in order to complete homework assignments and view downloaded tutorials. Check <a href="https://gist.github.com/jadebc-berkeley/5803c054fc2250054a3716b71c0b8b70">here</a> for an up-to-date list of required packages.</p>
+<p>To install these packages, you can use the first chunk of code in your first homework assignment (<code>hw_prev.R</code>) (see below). You only need to run this code one time. Then restart RStudio before beginning your homework.</p>
+<div class="figure">
+<img src="images/setup.png" />
+
+</div>
+</div>
+</div>
+<div id="section-organizing-your-files" class="section level2">
+<h2>Organizing your files</h2>
+<div id="section-saving-your-files-on-your-computer" class="section level3">
+<h3>Saving your files on your computer</h3>
+<p>Proper organization of your files will make your coding experience much smoother. We suggest the following:</p>
+<ul>
+<li>Create a folder for the course on your computer. For example: <code>&quot;~/C:/PH250B/R_homework/&quot;</code></li>
+<li>Create separate folders for each homework assignment within the course folder.</li>
+<li>When you run an R script that reads in data, if the data is located in the same directory as the homework script, you should be able to load the data without modifying the code. For example, in the image above, <code>hw_inc.R</code> is in the same folder as <code>hw_incidence.RData</code>. In <code>hw_inc.R</code>, running the code <code>load(hw_incidence.RData)</code> will load the dataset without requiring you to edit the directory name in the R script.</li>
+</ul>
+<div class="figure">
+<img src="images/samplefolders.png" />
+
+</div>
+</div>
+<div id="section-create-an-rstudio-project-for-each-homework-assignment" class="section level3">
+<h3>Create an RStudio project for each homework assignment</h3>
+<p>RStudio allows you to create projects that contain a combination of R scripts, datasets, and analysis results all in one place. We recommend that you create a new project for each homework assignment. This makes it easy for R to locate the R script containing the assignment and to load the data associated with that assignment. Complete this step after downloading your homework zip file. It will create a new project with the extension .Rproj. The video below shows you how to do this.</p>
+<!-- ![](www/new_rstudio_project.mp4)   -->
+<video width="720" controls>
+<source src="www/new_rstudio_project.mp4" type="video/mp4">
+</video>
+</div>
+</div>
+<div id="section-using-okpy.org" class="section level2">
+<h2>Using okpy.org</h2>
+<p>Homework must be submitted through <a href="okpy.org" class="uri">okpy.org</a> It will be graded on accuracy as well as style (i.e., how organized the code is). We encourage you to work on these assignments with your classmates. You are likely to learn more by working with each other. Feel free to ask and answer questions and share your ideas with each other. That being said, homework is submitted and graded individually.</p>
+<ul>
+<li>Use the same email address associated with bCourses to log in to <a href="okpy.org" class="uri">okpy.org</a>.</li>
+<li>You will be able to see all homework assignments available for the course.</li>
+<li>When submitting an assignment, do not change the original file name of the homework prior to submission. For example, if the homework assignment is called <code>hw_prev.R</code>, submit a file called <code>hw_prev.R</code> with your solutions.</li>
+<li>You do not need to include your name in the script.</li>
+</ul>
+<div id="section-how-to-submit-homework-on-okpy.org" class="section level4">
+<h4>How to submit homework on okpy.org:</h4>
+<p><a href="https://www.youtube.com/watch?v=gO7Pkj51Qy8&amp;feature=youtu.be"><img src="https://img.youtube.com/vi/gO7Pkj51Qy8/0.jpg" /></a></p>
+</div>
+</div>
+<div id="section-autograding" class="section level2">
+<h2>Autograding</h2>
+<p>Each homework has an autograder that allows you to check whether you got the right answer to each problem as you code.</p>
+<ul>
+<li>You must have an internet connection for the autograder to work.</li>
+<li>The autograder tries to anticipate the mistakes you may have made and will give you a hint if your answer is not correct.</li>
+<li>As shown below, running code that says <code>CheckProblem1</code> will check the result of Problem 1. You can change the values of <code>x</code> and <code>y</code> and run <code>CheckProblem1</code> again, repeating this process until you get the right answer.</li>
+<li>Getting a 100% score using the autograder doesn’t guarantee that you will get a 100% score on the assignment. We recommend that you use the autograder as a helpful tool but that you carefully check your code as well to make sure you think it’s right (even if the autograder says so).</li>
+</ul>
+<div class="figure">
+<img src="www/sample-autograder-small.gif" />
+
+</div>
+
+<script type="application/shiny-prerendered" data-context="server-start">
+library(learnr)
+library(png)
+library(knitr)
+knitr::opts_chunk$set(echo = FALSE)
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::register_http_handlers(session, metadata = NULL)
+</script>
+ <!--html_preserve-->
+<script type="application/shiny-prerendered" data-context="dependencies">
+{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["jquery"]},{"type":"character","attributes":{},"value":["1.11.3"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["rmd/h/jquery-1.11.3"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["jquery.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["rmarkdown"]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["bootstrap"]},{"type":"character","attributes":{},"value":["3.3.5"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["rmd/h/bootstrap-3.3.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["viewport"]}},"value":[{"type":"character","attributes":{},"value":["width=device-width, initial-scale=1"]}]},{"type":"character","attributes":{},"value":["js/bootstrap.min.js","shim/html5shiv.min.js","shim/respond.min.js"]},{"type":"character","attributes":{},"value":["css/cerulean.min.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["rmarkdown"]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["pagedtable"]},{"type":"character","attributes":{},"value":["1.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["rmd/h/pagedtable-1.1"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["js/pagedtable.js"]},{"type":"character","attributes":{},"value":["css/pagedtable.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["rmarkdown"]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["highlightjs"]},{"type":"character","attributes":{},"value":["9.12.0"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["rmd/h/highlightjs"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["highlight.js"]},{"type":"character","attributes":{},"value":["textmate.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["rmarkdown"]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["tutorial"]},{"type":"character","attributes":{},"value":["0.9.2.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/tutorial"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["tutorial.js"]},{"type":"character","attributes":{},"value":["tutorial.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["tutorial-autocompletion"]},{"type":"character","attributes":{},"value":["0.9.2.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/tutorial"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["tutorial-autocompletion.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["tutorial-diagnostics"]},{"type":"character","attributes":{},"value":["0.9.2.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/tutorial"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["tutorial-diagnostics.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["tutorial-format"]},{"type":"character","attributes":{},"value":["0.9.2.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["rmarkdown/templates/tutorial/resources"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["tutorial-format.js"]},{"type":"character","attributes":{},"value":["tutorial-format.css","rstudio-theme.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["jquery"]},{"type":"character","attributes":{},"value":["1.11.3"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["rmd/h/jquery-1.11.3"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["jquery.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["rmarkdown"]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["font-awesome"]},{"type":"character","attributes":{},"value":["4.5.0"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["rmd/h/font-awesome-4.5.0"]}]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["css/font-awesome.min.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["rmarkdown"]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["bootbox"]},{"type":"character","attributes":{},"value":["4.4.0"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/bootbox"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["bootbox.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["localforage"]},{"type":"character","attributes":{},"value":["1.5"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/localforage"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["localforage.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["tutorial"]},{"type":"character","attributes":{},"value":["0.9.2.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/tutorial"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["tutorial.js"]},{"type":"character","attributes":{},"value":["tutorial.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["tutorial-autocompletion"]},{"type":"character","attributes":{},"value":["0.9.2.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/tutorial"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["tutorial-autocompletion.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["tutorial-diagnostics"]},{"type":"character","attributes":{},"value":["0.9.2.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/tutorial"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["tutorial-diagnostics.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]}]}]}
+</script>
+<!--/html_preserve-->
+</div>
+
+</div> <!-- topics -->
+
+<div class="topicsContainer">
+<div class="topicsPositioner">
+<div class="band">
+<div class="bandContent topicsListContainer">
+
+<!-- begin doc-metadata -->
+<div id="doc-metadata">
+<h2 class="title toc-ignore" style="display:none;">R-for-Epi Homework Instructions</h2>
+</div>
+<!-- end doc-metadata -->
+
+</div> <!-- bandContent.topicsListContainer -->
+</div> <!-- band -->
+</div> <!-- topicsPositioner -->
+</div> <!-- topicsContainer -->
+
+
+</div> <!-- bandContent page -->
+</div> <!-- pageContent band -->
+
+
+
+
+<script>
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+</script>
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+
+</html>
