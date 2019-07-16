@@ -4,10 +4,6 @@
 
 # Homework: Relational data
 #####################################
-# Install the tidyr package 
-# You only need to run this line of code once: 
-install.packages("tidyr", dependencies = TRUE)
-
 # Load okR autograder
 devtools::source_gist(id='c51aa518409de66db72622bfb082f5d6', filename='hw_relational_data.ok.R', quiet = TRUE)
 AutograderInit()

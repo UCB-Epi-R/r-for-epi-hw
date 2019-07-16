@@ -5,6 +5,7 @@ install.packages("checkr", dependencies = TRUE)
 install.packages("assertthat", dependencies = TRUE)
 install.packages("dplyr", dependencies = TRUE)
 install.packages("ggplot2", dependencies = TRUE)
+install.packages("tidyr", dependencies = TRUE)
 
 
 if (!require(devtools)) 
