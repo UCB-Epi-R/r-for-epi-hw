@@ -1,11 +1,11 @@
-#################################################
+#####################################
 # Epidemiologic Methods II 
 # PHW250F, PHW250G, PH250B
 
-# Homework: Incidence
+# Solutions: Homework 3, Incidence
 #################################################
 # Load okR autograder
-devtools::source_gist(id='b7765ccf9007935f0c7b3f0fbb55b60b', filename='hw_inc.ok.R', quiet = TRUE)
+devtools::source_gist(id='7770fec06a23b19595ce8d6997952e04', filename='hw3_inc.ok.R', quiet = TRUE)
 AutograderInit()
 
 #################################################
@@ -17,14 +17,12 @@ library(dplyr)
 # In this problem set we will calculate incidence
 # using different formulas. 
 
-# Now read in the data for this assignment 
-# that you downloaded from the course website. 
+# Read in the data for this assignment. 
 # The data is saved as a .RData file, so you need 
 # to use the load command to load the data. 
-# Make sure that the .RData file is saved in the
-# same location on your computer as the 
-# hw_inc.R script. 
-load("hw3_incidence.RData")
+# Fill the R data file name in the quotes below 
+# without the data directory information.
+load(paste0("data/hw3_incidence.RData"))
 
 #################################################
 # Section 1: Use the Kaplan-Meier method 
@@ -70,96 +68,56 @@ km_cum_surv = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 # Check your answer
 CheckProblem4()
 
-
 #################################################
 # Section 2: Use the Density method 
 # to calculate the incidence in the data
 # frame called "dm"
 #################################################
-# First, display the data.frame "dm"
+# display the data.frame "dm"
 dm
 
 #-----------------------------------------------
-# Problem 5: add a column to the data.frame dm called
-# "W" that is an indicator for withdrawals 
-# during that interval. All intervals will have
-# no withdrawal (W=0) except at times 4, 10, and 12,
-# when the variable is equal to 1. 
+# Problem 5: calculate person-time using a formula that 
+# assumes withdrawals occur halfway through each
+# interval. Withdrawals are indicated in the column "W".
 #-----------------------------------------------
+delta_t=2
 dm = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 
 # Check your answer
 CheckProblem5()
 
 #-----------------------------------------------
-# Problem 6: calculate person-time using a formula that 
-# assumes withdrawals occur halfway through each
-# interval
-#-----------------------------------------------
-delta_t= "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
-dm =  "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
-
-# Check your answer
-CheckProblem6()
-
-#-----------------------------------------------
-# Problem 7: calculate the conditional risk as a new 
+# Problem 6: calculate the conditional risk as a new 
 # column in the dm dataframe
 #-----------------------------------------------
 dm = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 
 # Check your answer
-CheckProblem7()
+CheckProblem6()
 
 #-----------------------------------------------
-# Problem 8: calculate cumulative risk  and save it  
+# Problem 7: calculate cumulative risk  and save it  
 # as a scalar named dm_cum_risk
 #-----------------------------------------------
 dm_cum_risk = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 
 # Check your answer
-CheckProblem8()
+CheckProblem7()
 
 #-----------------------------------------------
-# Problem 9: calculate cumulative survival  and save it  
+# Problem 8: calculate cumulative survival and save it  
 # as a scalar named dm_cum_surv
 #-----------------------------------------------
 dm_cum_surv = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 
 # Check your answer
-CheckProblem9()
+CheckProblem8()
 
-#################################################
-# Section 3: Convert the incidence density 
-# calculated using the density method
-# to prevalence without making the 
-# rare disease assumption. Assume that the
-# duration of disease is 5 days and that 
-# the time variable in data.frame dm is 
-# recorded in days. 
-#################################################
-#-----------------------------------------------
-# Problem 10: first, write a function called calc_prev
-# with an argument for incidence density called id 
-# and an argument for duration of disease called d
-#-----------------------------------------------
-calc_prev = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
-
-# Check your answer
-CheckProblem10()
-
-#-----------------------------------------------
-# Problem 11: Using the function your wrote in the
-# the previous problem, calculate prevalence as a
-# scalar called prev_dm
-#-----------------------------------------------
-prev_dm = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
-
-# Check your answer
-CheckProblem11()
 
 # --------------------------------------------
 # Check your total score
 MyTotalScore()
 # --------------------------------------------
+
 

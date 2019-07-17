@@ -6,7 +6,7 @@
 # homework #3: analysis 
 #####################################
 # Load okR autograder
-devtools::source_gist(id='7963b66bf7b33c63a7924fff8b625652', filename='hw_epi_analysis_3.ok.R', quiet = TRUE)
+devtools::source_gist(id='697096aa9152ad361a3eb59e642188f3', filename='hw8b_epi_analysis.ok.R', quiet = TRUE)
 AutograderInit()
 
 library(dplyr)
@@ -15,7 +15,7 @@ library(dplyr)
 # Load data generated in the prior assignment
 #-----------------------------------------------
 # Load each dataset 
-all = read.csv("washb-bangladesh-anthro-combined.csv")
+all = read.csv(paste0(here::here(),"/data/washb-data/washb-bangladesh-anthro-combined.csv"))
 
 #-----------------------------------------------
 # Problem 1: What measure of association do you 

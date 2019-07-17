@@ -5,7 +5,7 @@
 # Homework: Relational data
 #####################################
 # Load okR autograder
-devtools::source_gist(id='c51aa518409de66db72622bfb082f5d6', filename='hw_relational_data.ok.R', quiet = TRUE)
+devtools::source_gist(id='ecdd49aa0409cd70088ef385b38dded9', filename='hw7_relational_data.ok.R', quiet = TRUE)
 AutograderInit()
 
 # NOTE: In this homework, in order for the autograder
@@ -19,7 +19,7 @@ library(dplyr)
 library(tidyr)
 
 # Load the data for this assignment
-load("hw7_relational_data.RData")
+load(paste0("data/hw7_relational_data.RData"))
 
 # This homework will focus on a hypothetical study 
 # of children under 10 years of ago. You are the data

@@ -5,7 +5,7 @@
 # Solutions: Data visualization
 #####################################
 # Load okR autograder
-devtools::source_gist(id='051cfa90f886c41d0053335fe0e7f1a1', filename='hw_datavis.ok.R', quiet = TRUE)
+devtools::source_gist(id='bba6799eab96871d66e08a78a4846ae3', filename='hw6_datavis.ok.R', quiet = TRUE)
 AutograderInit()
 
 # Note: since this homework assignment focuses on plotting,
@@ -17,7 +17,7 @@ AutograderInit()
 # solutions code are available: https://goo.gl/bPUkBo
 
 # Read in the water quality dataset from the Surfer Health Study:
-wq = read.csv("shs-wq-public.csv")
+wq = read.csv(paste0(here::here(),"/data/Surfer-data/shs-wq-public.csv"))
 
 # In this problem set we will investigate the relationship
 # between precipitation and fecal coliform. We will 

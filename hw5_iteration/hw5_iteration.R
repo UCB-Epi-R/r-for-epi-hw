@@ -2,10 +2,10 @@
 # Epidemiologic Methods II 
 # PHW250F, PHW250G, PH250B
 
-# Homework: Iteration
+# Solutions: Homework 5, Iteration
 #####################################
 # Load okR autograder
-devtools::source_gist(id='b2d5a189faf70801f855a314fa69dbc9', filename='hw_iteration.ok.R', quiet = TRUE)
+devtools::source_gist(id='849236a998ed3d576767e5da336fe69b', filename='hw5_iteration.ok.R', quiet = TRUE)
 AutograderInit()
 
 # Let's load the dplyr package
@@ -32,10 +32,10 @@ library(dplyr)
 # Then use the following commands to read in the data. 
 
 # Load the diarrhea dataset:
-d = read.csv("washb-bangladesh-diar-public.csv")
+d = read.csv(paste0(here::here(),"/data/washb-data/washb-bangladesh-diar-public.csv"))
 
 # Load the dataset with treatment variables: 
-tr = read.csv("washb-bangladesh-tr-public.csv")
+tr = read.csv(paste0(here::here(),"/data/washb-data/washb-bangladesh-tr-public.csv"))
 
 # Next let's merge the two datasets together.
 # This will allow us to calculate the prevalence
@@ -64,7 +64,9 @@ head(d_tr)
 
 #-----------------------------------------------
 # Problem 1: Calculate the diarrhea prevalence in  
-# each treatment arm. Save the results in an object
+# each treatment arm. As a reminder, the diarrhea
+# status is saved in the variable diar7d. 
+# Save the results in an object
 # called prevalence_tr. It should have 7 rows (one
 # for each treatment) and two columns. The first 
 # column should be for the treatment name and the
@@ -74,7 +76,6 @@ head(d_tr)
 # called hw_prev, and you can use the same code)
 #-----------------------------------------------
 prevalence_tr = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
-prevalence_tr 
 
 # Check your answer
 CheckProblem1()
@@ -86,14 +87,17 @@ CheckProblem1()
 # be called calculate_inc_rare. It should take
 # two arguments for prevalence (prev) and duration (d)
 # of disease. It should return the estimated
-# incidence density in person-days (id). 
+# incidence density in person-days. You only need
+# to write a function in this problem - you 
+# don't need to calculate anything yet. 
+
+# Note: the autograder will only check that
+# you defined a function with the correct name
+# and that the arguments are named correctly. 
 #------------------------------------
 calculate_inc_rare = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 
 # Check your answer
-# Note: the autograder will only check that
-# you defined a function with the correct name
-# and that the arguments are named correctly. 
 CheckProblem2()
 
 #------------------------------------
@@ -103,10 +107,9 @@ CheckProblem2()
 # in each arm assuming that the duration is 5 days.
 # Use the function calculate_inc_rare to 
 # estimate the incidence density and name the column 
-# incidence.
+# incidence_density
 #------------------------------------
 prevalence_tr = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
-prevalence_tr 
 
 # Check your answer
 CheckProblem3()
@@ -130,7 +133,6 @@ control_inc = as.vector(control_inc$incidence)
 
 # calculate the incidence difference in each arm 
 prevalence_tr = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
-prevalence_tr 
 
 # Check your answer
 CheckProblem4()
@@ -180,7 +182,9 @@ symptoms = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 CheckProblem6()
 
 #------------------------------------
-# Problem 7: Which symptoms were the most common?
+# Problem 7: Optional challenge question!
+
+# Which symptoms were the most common?
 # Enter your answer as a string scalar named p7
 # including the column name in the quotes.
 # (e.g., p7 = "dloose2d")
@@ -189,7 +193,6 @@ p7 = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 
 # Check your answer
 CheckProblem7()
-
 
 # --------------------------------------------
 # Check your total score

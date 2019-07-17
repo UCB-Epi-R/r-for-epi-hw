@@ -1,19 +1,11 @@
-# Install packages required for R homework
-
-# Important: Be sure to restart RStudio after 
-# Note: You only need to run this line once!
-install.packages("devtools", dependencies=TRUE)
-devtools::source_gist(id='5803c054fc2250054a3716b71c0b8b70', filename='hw_setup.R', quiet = TRUE)
 #################################################
-# Epidemiologic Methods II
-# PHW150F, PHW250G, PH250B
+# Epidemiologic Methods II 
+# PHW250F, PHW250G, PH250B
 
-# Homework: Prevalence
+# Solutions: Homework 2, Prevalence
 #################################################
-# DO NOT CHANGE ANY CODE ABOVE THIS LINE
-
 # Load okR autograder
-devtools::source_gist(id='f3e5c050f617990f4f255d1aada0f396', filename='hw_prev.ok.R', quiet = TRUE)
+devtools::source_gist(id='5a0985ad15a457817e69bd29ef00c274', filename='hw2_prev.ok.R', quiet = TRUE)
 AutograderInit()
 
 #################################################
@@ -27,7 +19,10 @@ library(dplyr)
 # water, sanitation, handwashing, and nutrition 
 # interventions delivered separately or together
 # could reduce child diarrhea and/or improve child
-# growth. See Luby et al. 2018 for full details 
+# growth. The trials used a cluster- and block-randomized 
+# design. Within each geographic block, 8 village clusters
+# were randomized to a treatment or conrtol arm. 
+# See Luby et al. 2018 for full details 
 # (doi: http://dx.doi.org/10.1016/)
 
 # In this problem set we will calculate the prevalence
@@ -43,10 +38,10 @@ library(dplyr)
 # Then use the following commands to read in the data. 
 
 # Load the diarrhea dataset:
-d = read.csv("washb-bangladesh-diar-public.csv")
+d = read.csv(paste0(here::here(),"/data/washb-data/washb-bangladesh-diar-public.csv"))
 
-# Load the dataset with treatment variables: 
-tr = read.csv("washb-bangladesh-tr-public.csv")
+# Load the dataset with 
+tr = read.csv(paste0(here::here(),"/data/washb-data/washb-bangladesh-tr-public.csv"))
 
 # Next let's merge the two datasets together.
 # This will allow us to calculate the prevalence
@@ -64,7 +59,7 @@ d_tr = d_tr %>% filter(svy!=0)
 
 # Now we are going to drop children with missing values 
 # in the diarrhea variable from the dataset. This 
-# assumes that they were missing at random - i.e., 
+# assumes that they were missing completely at random - i.e., 
 # that there are no characteristics associated with whether
 # a child was missing diarrhea measurement. 
 d_tr = d_tr %>% filter(!is.na(diar7d))
@@ -84,7 +79,6 @@ head(d_tr)
 # "n_with_diarrhea"
 #-----------------------------------------------
 p1 = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
-p1
 
 # Check your answer
 CheckProblem1()
@@ -109,7 +103,6 @@ CheckProblem2()
 # save it in an object called prevalence.
 #-----------------------------------------------
 prevalence = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
-prevalence
 
 # Check your answer
 CheckProblem3()
@@ -118,13 +111,18 @@ CheckProblem3()
 # Problem 4: Now let's get counts of whether children
 # did or did not have diarrhea in each treatment arm. 
 # In the tutorial, this created a 2x2 table for us.
-# However, in the WASH Benefits trial, there were 
+# Here, since the WASH Benefits trial, there were 
 # 7 different arms (6 intervention + control) 
-# so the result will include 14 rows. For each arm
-# there is a row for the number of children with
-# and the number without diarrhea. Save your table
-# in an object called diar_tr_table. Call the column
-# with the number of children "n"
+# create a data frame with 14 rows (two for each arm). 
+# The first column is called "tr" for treatment. 
+# The second column is called "diar7d" and includes 0
+# for children without diarrhea and 1 for children with
+# diarrhea. The third column is called "n" and includes the
+# number of children with or without diarrhea in that arm. 
+
+# Hint: the row for Control with no diarrhea should be this: 
+# tr              diar7d     n
+# Control              0  3782
 #-----------------------------------------------
 diar_tr_table = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 diar_tr_table
@@ -156,7 +154,7 @@ CheckProblem5()
 # prevalence_tr to indicate your answer in an
 # object called p6. (e.g., p6 = "Control")
 #-----------------------------------------------
-p6 = "<<<<<<<<<<<<< YOUR ANSWER HERE >>>>>>>>>>>>>>>"
+p6 = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 
 # Check your answer
 CheckProblem6()
@@ -169,7 +167,7 @@ CheckProblem6()
 # prevalence_tr to indicate your answer in an
 # object called p6. (e.g., p7 = "Control")
 #-----------------------------------------------
-p7 = "<<<<<<<<<<<<< YOUR ANSWER HERE >>>>>>>>>>>>>>>"
+p7 = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 
 # Check your answer
 CheckProblem7()

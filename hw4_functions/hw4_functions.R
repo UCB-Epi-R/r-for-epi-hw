@@ -2,11 +2,10 @@
 # Epidemiologic Methods II 
 # PHW250F, PHW250G, PH250B
 
-# Homework: Functions
-# Updated on 9/9/18
+# Solutions: Homework 4, Functions
 #####################################
 # Load okR autograder
-devtools::source_gist(id='ebf271c665c5d7a83b57dfc8fd15b8e7', filename='hw_functions.ok.R', quiet = TRUE)
+devtools::source_gist(id='d50f66aca9f1dd15bf80d0e00ef6258b', filename='hw4_functions.ok.R', quiet = TRUE)
 AutograderInit()
 
 # In this assignment, we'll use the same 2x2 table
@@ -19,7 +18,6 @@ d = 10
 
 #------------------------------------
 # Problem 1: Calculate the relative risk
-
 # In the risk difference tutorial, we defined
 # a function that calculated the risk difference.
 # Now you need to modify the risk difference
@@ -29,7 +27,7 @@ d = 10
 # The output will be the RR. Call the function 
 # estimate_rr
 #------------------------------------
-estimate_rr = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
+estimate_rr="<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 
 # Check your answer
 CheckProblem1()
@@ -53,14 +51,22 @@ CheckProblem2()
 # to calculate the CI for the relative risk. 
 # The function will take 2x2 cells as arguments
 # and return the lower and upper bound of 
-# the interval. 
-# Call the function estimate_rr_ci
+# the interval.
+# Call the function estimate_rr_ci 
+
+# Hint: the SE equation is: sqrt((1/a) + (1/c))
+
 # Be sure to report the CI on the correct scale
 # (i.e., not on the ln scale but on the RR scale)
+# In R, the natural log can be calculated using
+# the "log" function (NOT "ln")
 
-# Instead of using 1.96, use the code qnorm(0.975), 
-# which provides you with the same number with 
-# additional digits for precision. 
+# Note: the autograder for this problem is 
+# only checking that the function is set up
+# correctly - not that the calculation is right!
+# If the function is set up correctly, but your
+# math is wrong, Problem 3 will show up as 
+# correct, but Problem 4 will show up as incorrect. 
 #------------------------------------
 estimate_rr_ci = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 
@@ -68,8 +74,8 @@ estimate_rr_ci = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 CheckProblem3()
 
 #------------------------------------
-# Problem 4: Apply the function estimate_rr_ci to the values
-# a, b, c, and d defined above. Save the
+# Problem 4: Apply the function estimate_rr_ci to the 
+# values a, b, c, and d defined above. Save the
 # lower bound of the results in an object
 # called p4_lb and the upper bound in an object
 # called p4_ub
@@ -84,18 +90,18 @@ CheckProblem4()
 # Problem 5: Calculate the odds ratio
 
 # Now write a new function to calculate the
-# odds ratio. Use the 2x2 table cells as arguments.
+# odds ratio. Use the 2x2 table cells as agruments.
 # Call the function estimate_or
 #------------------------------------
-estimate_or = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
+estimate_or = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>" 
 
 # Check your answer
 CheckProblem5()
 
 #------------------------------------
-# Problem 6: Apply the function estimate_or to the values
+# Problem 6: Apply the function estimate_rr_ci to the values
 # a, b, c, and d defined above. Save the
-# results in an object called p6. 
+# results in an object called p4. 
 #------------------------------------
 p6 = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 
@@ -110,11 +116,9 @@ CheckProblem6()
 # 95% CI for the OR. Use the 2x2 table cells as arguments.
 # Call the function estimate_or_ci
 # Be sure to report the CI on the correct scale
-# (i.e., not on the ln scale but on the RR scale)
+# (i.e., not on the ln scale but on the OR scale)
 
-# Instead of using 1.96, use the code qnorm(0.975), 
-# which provides you with the same number with 
-# additional digits for precision. 
+# Hint: the SE equation is: sqrt((1/a)+(1/b)+(1/c)+(1/d))
 #------------------------------------
 estimate_or_ci = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 
@@ -140,11 +144,10 @@ CheckProblem8()
 
 # Write a function that uses 2x2 table cells
 # as arguments and returns the PAR.
-# Call the function estimate_par
+# Call the function par.fn
 #------------------------------------
-# function that calculates PAR
 estimate_par = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
-  
+
 # Check your answer
 CheckProblem9()
 
@@ -153,6 +156,7 @@ CheckProblem9()
 # a, b, c, and d defined above. Save the
 # results in an object called p10. 
 #------------------------------------
+# apply function to 2x2 table
 p10 = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 
 # Check your answer
@@ -162,5 +166,6 @@ CheckProblem10()
 # Check your total score
 MyTotalScore()
 # --------------------------------------------
+
 
 

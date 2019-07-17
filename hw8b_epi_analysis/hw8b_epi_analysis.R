@@ -6,7 +6,7 @@
 # homework #2: analysis preparation
 #####################################
 # Load okR autograder
-devtools::source_gist(id='70cb79937ffd5067444c5d364230fc93', filename='hw_epi_analysis_2.ok.R', quiet = TRUE)
+devtools::source_gist(id='94712b3f2dcdc263636f66757526ace8', filename='hw8a_epi_analysis.ok.R', quiet = TRUE)
 AutograderInit()
 
 # NOTE: In this homework, in order for the autograder
@@ -31,6 +31,12 @@ CheckProblem1()
 # treatment: washb-bangladesh-tr-public.csv
 # enroll: washb-bangladesh-enrol-public.csv
 # anthro: washb-bangladesh-anthro-public.csv
+
+# Hint: use code from previous homework assignments. 
+# If you have trouble, make sure your code is
+# pointing to the correct directory, and make sure you
+# opened the phw250fgfall2019 R Project before 
+# getting started. 
 #-----------------------------------------------
 # Load each dataset 
 treatment = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
