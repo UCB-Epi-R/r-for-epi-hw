@@ -26,11 +26,6 @@ library(dplyr)
 # The data and codebooks are publicly available here: 
 # https://osf.io/pqzj5/
 
-# Make sure you downloaded the data from 
-# the course site. Save the csv files in the same
-# location on your computer as the script hw_iteration.R
-# Then use the following commands to read in the data. 
-
 # Load the diarrhea dataset:
 d = read.csv(paste0(here::here(),"/data/washb-data/washb-bangladesh-diar-public.csv"))
 
