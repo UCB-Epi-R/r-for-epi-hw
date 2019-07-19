@@ -1,6 +1,7 @@
-#####################################
-# Epidemiologic Methods II 
-# PHW250F, PHW250G, PH250B
+#################################################
+# R-for-Epi
+# Epidemiologic Methods II (PHW250F, PHW250G)
+# created by Jade Benjamin-Chung
 
 # Solutions: Homework 3, Incidence
 #################################################
