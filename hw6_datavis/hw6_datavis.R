@@ -85,6 +85,7 @@ CheckProblem2()
 p3 = ggplot("<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>")
 p3 
 
+# Check your answer
 CheckProblem3()
 
 # --------------------------------------------
@@ -96,6 +97,7 @@ CheckProblem3()
 # --------------------------------------------
 p4 = #<< YOUR ANSWER HERE >>#
   
+# Check your answer
 CheckProblem4()
 
 # --------------------------------------------
@@ -109,6 +111,9 @@ CheckProblem4()
 # c) Fecal coliform has a much weaker relationship with precipitation 
 # --------------------------------------------
 p5 = #<< YOUR ANSWER HERE >>#
+
+# Check your answer
+CheckProblem5()
 
 # --------------------------------------------
 # Problem 6: Evaluate whether fecal coliform concentration
@@ -131,6 +136,9 @@ wq = wq %>%
 p6 = ggplot("#<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>#")
 p6
 
+# Check your answer
+CheckProblem6()
+
 # --------------------------------------------
 # Problem 7: Review the box plot you created in 
 # the previous task. Was the median concentration
@@ -142,6 +150,8 @@ p6
 # --------------------------------------------
 p7 = #<< YOUR ANSWER HERE >>#
 
+# Check your answer
+CheckProblem7()
 
 # --------------------------------------------
 # Check your total score
