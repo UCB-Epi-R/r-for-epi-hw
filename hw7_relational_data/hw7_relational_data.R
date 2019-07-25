@@ -6,7 +6,7 @@
 # Homework: Relational data
 #####################################
 # Load okR autograder
-devtools::source_gist(id='ecdd49aa0409cd70088ef385b38dded9', filename='hw7_relational_data.ok.R', quiet = TRUE)
+source("setup/hw7_relational_data.ok.R")
 AutograderInit()
 
 # NOTE: In this homework, in order for the autograder
@@ -23,7 +23,7 @@ library(tidyr)
 load(paste0("data/hw7_relational_data.RData"))
 
 # This homework will focus on a hypothetical study 
-# of children under 10 years of ago. You are the data
+# of children under 10 years of age. You are the data
 # analyst, and your task is to explore the 
 # pattern of infection with cryptosporidium, a 
 # type of parasite, by age in years and sex. You must also 
@@ -142,6 +142,12 @@ CheckProblem5()
 # Problem 6: Now add a column to the data frame 
 # baseline_lab_long called age_u5 that contains 
 # 1 if the age is <5 and 0 if the age is 5 or older. 
+
+# Hint: use the ifelse function. For example, if you want
+# to make a variable called age_u10 equal to 1
+# if the child is under 10 and 0 if they are over 10, 
+# you would use ifelse as follows when defining
+# the variable: ifelse(age < 10, 1, 0)
 #-----------------------------------------------
 baseline_lab_long = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 
@@ -247,6 +253,10 @@ CheckProblem12()
 # Modify the fu_survey_long data frame's time column. For example, 
 # replace "diarrhea_time1" with "1" and so on. You can
 # use nested ifelse functions to achieve this. 
+
+# Note: if the autograder notes an error for this 
+# problem but you think you are correct, you may need
+# to rerun the code starting from Problem 11. 
 #-----------------------------------------------
 fu_survey_long  = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 
@@ -271,7 +281,8 @@ CheckProblem14()
 # called diarrhea_crypto_prev It should contain two
 # rows (one for diarrhea presence, one for absence)
 # and a column for diarrhea and a column named 
-# crypto_prev. 
+# crypto_prev. If there is a row for misisng
+# values for diarrhea, remove it from diarrhea_crypto_prev
 #-----------------------------------------------
 diarrhea_crypto_prev = "<<<<<<<<<<<<< YOUR CODE HERE >>>>>>>>>>>>>>>"
 
